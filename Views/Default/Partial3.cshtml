@@ -1,0 +1,9 @@
+﻿@*top 10 bölümü*@
+@using TatilSitesiproje.Models.Siniflar
+@model List<Blog>
+@{int x = 1;}
+@foreach (var i in Model)
+{
+    <li class="list-bg"><span>@x.</span><a href="/Blog/BlogDetay/@i.ID">@i.Baslik</a></li>
+    x = x + 1;
+}

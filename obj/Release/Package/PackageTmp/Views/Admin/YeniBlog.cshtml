@@ -1,0 +1,24 @@
+﻿@model TatilSitesiproje.Models.Siniflar.Blog
+@{
+    ViewBag.Title = "YeniBlog";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yeni Blog Ekleme Sayfası</h2>
+<br/>
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.Baslik) @*sql deki sütun ismini aliyor.*@
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" }) @*form control sadece css icin*@
+    <br />
+    @Html.LabelFor(x => x.Aciklama)
+    @Html.TextAreaFor(x => x.Aciklama, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Tarih)
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.BlogImage)
+    @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control" })
+    <button class="btn btn-primary" style="margin-top:20px;">Gönder</button>
+
+
+</form>

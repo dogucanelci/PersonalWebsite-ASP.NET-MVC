@@ -1,0 +1,40 @@
+﻿@using TatilSitesiproje.Models.Siniflar
+@model List<Hakkimizda> 
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Home/_testlayout.cshtml";
+}
+
+    <html>
+    <head>
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="css/slider.css" rel="stylesheet" type="text/css" media="all" />
+    </head>
+    <body>
+
+
+        <div class="content">
+            <div class="wrap">
+                <div class="about">
+                    <h3>Hakkımda</h3>
+                    
+                    @foreach (var i in Model)
+                    {
+                    <img src="@i.FotoUrl" alt="" />
+                    <center>
+                        <div>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/b9WTK3pMjsU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </center>
+                    <p>Meraklı bir Bilgisayar Mühendisliği Yüksek Lisans öğrencisi,amatör besteci</p>
+                    }
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
+

@@ -1,0 +1,78 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Dogu Can ELCI Personal WebSite || Home</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="~/web/css/style.css" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='@Url.Content("~/web/css/slider.css")' rel="stylesheet" type="text/css" media="all" />
+    <script src="~/web/js/jquery.min.js"></script>
+    <script src="~/web/js/responsiveslides.min.js"></script>
+
+    <script>
+    // You can also use "$(window).load(function() {" // Default--> controller tarafindaki
+    $(function () {
+      // Slideshow 1
+      $("#slider1").responsiveSlides({
+         auto: true,
+		 nav: true,
+		 speed: 500,
+		 namespace: "callbacks",
+      });
+    });
+    </script>
+   
+</head>
+<body>
+    <div>
+        <div style="background-color:#277fa5"><img src="~/web/images/my_banner1.png"/>
+             @*<p>Whatsapp : +90 531 000 00 00</p>*@
+            @*<div class="logo"><a href=#><img src="~/web/images/my_banner.png" alt="" /></a></div>*@
+        </div>
+    </div>
+   
+    <div class="header-bottom">
+        <div class="wrap">
+            <ul id="nav" style="width:100%">
+                <li><a href="/Default/Index/" style="font-family:Bahnschrift; font-size:larger">Anasayfa</a></li>
+
+                <li><a class="hsubs" href="/About/Index" style="font-family:Bahnschrift; font-size:larger">Hakkımda</a></li>
+                <li>
+                    <a class="hsubs" href="destinations.html"style="font-family:Bahnschrift; font-size:larger">Bestelerim</a>
+                    <ul class="subs">
+                        <li><a href="#">Epic Composes</a></li>
+                        <li><a href="#">Electronic Music</a></li>
+                        <li><a href="#">Classical Things</a></li>
+                    </ul>
+                </li>
+                <li><a class="hsubs" href="/Blog/Index" style="font-family:Bahnschrift; font-size:larger">Blogum</a></li>
+                <li><a href="contact.html" style="font-family:Bahnschrift; font-size:larger">İletişim</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class"content">
+        @RenderBody()
+
+    </div>
+    <div class="footer-bottom">
+        <div class="wrap">
+            <div class="copy">
+                <p>&copy; 2021. Tüm hakları saklıdır | Design by <a href="http://w3layouts.com">W3Layouts</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

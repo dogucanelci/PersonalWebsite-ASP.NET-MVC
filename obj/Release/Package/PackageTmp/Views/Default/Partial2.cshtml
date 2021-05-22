@@ -1,0 +1,43 @@
+﻿@*Gezilecek 3 yer resimli kısmının 3. sağa yakin blogu*@
+@using TatilSitesiproje.Models.Siniflar
+@model List<Blog>
+<div class="con-bot">
+    @*<div class="left">
+            <div class="bot-left">
+                <img src="~/web/images/pic.jpg" alt="" />
+            </div>
+            <div class="left-text">
+                <h4>Lorem ipsum dolor sit amet, conte adipiscing elit dolor sit amet</h4>
+                <span class="doller">$1024.99</span>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismo</p>
+                <p><a href="#"><span class="read">Read More >></span></a></p>
+            </div>
+        </div>*@
+    @foreach (var i in Model)
+    {
+        <div class="right">
+            <div class="bot-left">
+                <img src="@i.BlogImage" alt="" />
+            </div>
+            <div class="left-text">
+                <h4>@i.Baslik</h4>
+                <span class="doller">@i.Tarih.ToString("dd.MM.yyyy")</span>
+                <p>@i.Aciklama.Substring(0, 70)</p>
+                <p><a href="/Blog/BlogDetay/@i.ID"><span class="read">Devamını Oku >></span></a></p>
+            </div>
+        </div>
+    }
+    @*<div class="right">
+            <div class="bot-left">
+                <img src="~/web/images/pic2.jpg" alt="" />
+            </div>
+            <div class="left-text">
+
+                <h4>Lorem ipsum dolor sit amet, conte adipiscing elit dolor sit amet</h4>
+                <span class="doller">$924.99</span>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismo</p>
+                <p><a href="#"><span class="read">Read More >></span></a></p>
+            </div>
+        </div>*@
+    <div class="clear"></div>
+</div>

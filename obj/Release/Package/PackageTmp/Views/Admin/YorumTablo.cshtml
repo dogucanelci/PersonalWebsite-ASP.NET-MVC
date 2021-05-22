@@ -1,0 +1,32 @@
+﻿@using TatilSitesiproje.Models.Siniflar
+@model List<Yorumlar>
+@{
+    ViewBag.Title = "YorumTablo";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yorum Tablosu</h2>
+<br/>
+<table class="table table-bordered">
+    <tr>
+        <th style="color:darkred; font-size:x-large; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">İsim</th>
+        <th style="color:darkred; font-size:x-large; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Mail</th>
+        <th style="color:darkred; font-size:x-large; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Yorum</th>
+        <th style="color:darkred; font-size:x-large; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Blog</th>
+        <th style="color:darkred; font-size:x-large; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">İzin</th>
+    </tr>
+    @foreach (var i in Model)
+    {
+        <tr>
+            <th>@i.KullaniciAdi</th>
+            <th>@i.Mail</th>
+            <th>@i.Yorum</th>
+            <th>@i.Blog.Baslik</th>
+            <th><a href="/Admin/Yorumizin/@i.ID" class="btn btn-success">@i.izin</a></th>
+
+        </tr>
+
+    }
+
+</table>
+
